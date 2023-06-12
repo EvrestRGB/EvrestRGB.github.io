@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+
+
+
+  
+  <title>Document</title>
+    <link rel="canonical" href="https://codepen.io/WebDevSimplified/pen/xyRGxw" />
+  
+  
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Quicksand:300,500'>
+  
+<style>
+* {
+    box-sizing: border-box;
+}
+
+.html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #333;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.search-form-header {
+    color: #00FF6C;
+    margin-top: 100px;
+    text-align: center;
+    font-size: 5em
+}
+
+.search-input {
+    font-size: 1.5em;
+    max-width: 900px;
+    width: 60%;
+    flex-grow: 1;
+    padding: .5em;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: 2px solid #00FF6C;
+    color: #B2F8D0;
+    outline: none;
+    background-color: rgb(178, 248, 208, .2);
+}
+
+.search-input:focus {
+    border: 3px solid #00FF6C;
+}
+
+.search-button {
+    font-size: 1.5em;
+    border: 2px solid #00FF6C;
+    color: #B2F8D0;
+    background: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(178, 248, 208, .2);
+}
+
+.search-button:hover {
+    background-color: rgb(178, 248, 208, .5);
+    color: white;
+}
+
+.search-query {
+    color: #B2F8D0;
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.query {
+    color: #00FF6C;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Background Styles Only */
+.side-links {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.side-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: white;
+  width: 180px;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+.side-link-youtube {
+  background-color: red;
+}
+
+.side-link-twitter {
+  background-color: #1DA1F2;
+}
+
+.side-link-github {
+  background-color: #6e5494;
+}
+
+.side-link-text {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.side-link-icon {
+  color: white;
+  font-size: 30px;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+</head>
+
+<body translate="no">
+  <!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Injection</title>
+    </head>
+    <body>
+      <h1 class="search-form-header">My Awesome Site</h1>
+      <form class="search-form" autocomplete="off">
+          <input class="search-input" id="query-input" type="text" name="query" />
+          <button class="search-button" type="submit" role="button">Search</button>
+      </form>
+      <h3 class="search-query">You Queried: <span id="query-output" class="query"></span></h3>
+      
+      
+     
+      
+      
+      
+      
+      
+      
+      
+    
+      
+      
+      <!-- Side Links Only -->
+      <div class="side-links">
+        <a href="https://youtu.be/ns1LX6mEvyM" target="_blank" class="side-link side-link-youtube">
+          <i class="fab fa-youtube-square side-link-icon"></i>
+          <span class="side-link-text">View Tutorial</span>
+        </a>
+        <a href="https://github.com/WebDevSimplified" target="_blank" class="side-link side-link-github side-link-icon">
+          <i class="fab fa-github-square"></i>
+          <span class="side-link-text">View GitHub</span>
+        </a>
+        <a href="https://twitter.com/DevSimplified" target="_blank" class="side-link side-link-twitter">
+          <i class="fab fa-twitter-square side-link-icon"></i>
+          <span class="side-link-text">View Twitter</span>
+        </a>
+      </div>
+    </body>
+</html>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+  
+      <script id="rendered-js" >
+document.cookie = "username=me@me.com";
+document.cookie = "password=super_safe_password";
+if (document.readyState == 'loading') {
+  document.addEventListener('DOMContentLoaded', ready);
+} else {
+  ready();
+}
+
+function ready() {
+  var query = new URL(window.location).searchParams.get('query');
+  document.getElementById('query-input').value = query;
+  document.getElementById('query-output').innerHTML = query;
+}
+//# sourceURL=pen.js
+    </script>
+
+  
+</body>
+
+</html>
