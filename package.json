@@ -1,0 +1,22 @@
+{
+  "name": "EvrestRGB.github.io",
+  "version": "1.0.0",
+  "description": "Ma page perso, host par GitHub, et BitBucket. Pour GitLab, y'a un problème au niveau des pielines.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvrestRGB/EvrestRGB.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EvrestRGB/EvrestRGB.github.io/issues"
+  },
+  "homepage": "https://github.com/EvrestRGB/EvrestRGB.github.io#readme"
+
+  // https://evrestrgb.github.io
+}
