@@ -229,6 +229,36 @@ function ready() {
 //# sourceURL=pen.js
     </script>
 
+<script>
+  function sanitize(input) {
+  // Remove all HTML tags from the input.
+  input = input.replace(/<[^>]+>/g, "");
+
+  // Replace all special characters with their HTML entities.
+  input = input.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;");
+
+  // Return the sanitized input.
+  return input;
+}
+
+// Sanitize the user input from the search form.
+var query = sanitize(document.getElementById("query-input").value);
+
+// Display the sanitized input in the search output.
+document.getElementById("query-output").innerHTML = query;
+
+function ready() {
+  // Sanitize the user input from the search form.
+  var query = sanitize(document.getElementById("query-input").value);
+
+  // Display the sanitized input in the search output.
+  document.getElementById("query-output").innerHTML = query;
+}
+
+// Call the ready() function when the DOM is ready.
+document.addEventListener('DOMContentLoaded', ready);
+
+</script>
   
 </body>
 
