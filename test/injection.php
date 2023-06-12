@@ -1,47 +1,46 @@
 <?php
+// Démarrer la session
+session_start();
 
-function sanitize($input) {
-  // Escape special characters in the username
-  $username = htmlspecialchars($input, ENT_QUOTES, 'UTF-8');
-
-  // Validate the email address
-  $emailRegex = '/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,6}$/';
-  $email = preg_match($emailRegex, $input) ? $input : null;
-
-  // Validate the password
-  $passwordRegex = '/^[a-zA-Z0-9_!@#$%^&*()-]+$/';
-  $password = preg_match($passwordRegex, $input) ? $input : null;
-
-  return [
-    'username' => $username,
-    'email' => $email,
-    'password' => $password,
-  ];
+// Fonction d'échappement pour les données affichées dans la page
+function escape($data) {
+    return htmlspecialchars($data, ENT_QUOTES, 'UTF-8');
 }
 
-// Get the user input
-$input = [
-  'email' => $_POST['email'],
-  'password' => $_POST['password'],
-  'username' => $_POST['username'],
-];
+// Valider et enregistrer les données soumises par l'utilisateur
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-// Sanitize the user input
-$sanitizedInput = sanitize($input);
+    // Valider les données
 
-// Check if the input is valid
-if (!isset($sanitizedInput['username']) || !isset($sanitizedInput['email']) || !isset($sanitizedInput['password'])) {
-  echo 'Please enter valid input';
-  exit;
+    // Échapper les données avant de les afficher
+    $escapedUsername = escape($username);
+    $escapedEmail = escape($email);
+
+    // Enregistrer les données dans la base de données ou effectuer toute autre action requise
+    // Assurez-vous d'utiliser des requêtes préparées ou des mécanismes de protection contre les injections SQL
+
+    // Redirection après le traitement des données
+    header('Location: page_de_succes.php');
+    exit();
 }
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- ... Balises meta, titre, liens CSS ... -->
+</head>
+<body>
+    <form method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+        <input type="text" id="username" name="username" placeholder="Username" required> <br>
+        <input type="text" id="email" name="email" placeholder="E-mail" required> <br>
+        <input type="password" id="password" name="password" placeholder="Password" required> <br>
 
-// Create a new user
-$user = new User();
-$user->username = $sanitizedInput['username'];
-$user->email = $sanitizedInput['email'];
-$user->password = $sanitizedInput['password'];
+        <input type="submit" id="signUp" name="signup_submit" value="Sign Up">
 
-$user->save();
-
-// Redirect the user to the home page
-header('Location: /');
+        <!-- ... Autres éléments HTML ... -->
+    </form>
+</body>
+</html>
