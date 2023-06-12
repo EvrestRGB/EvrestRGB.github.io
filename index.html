@@ -126,63 +126,6 @@ sighUp.addEventListener('click', (e) => {
     // ..
   });
 });
-
-function sanitize(input) {
-  // Escape special characters in the username
-  const username = input.replace(/[<>"]/g, '');
-
-  // Validate the email address
-  const emailRegex = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,6}$/;
-  const email = emailRegex.test(input) ? input : null;
-
-  // Validate the password
-  const passwordRegex = /^[a-zA-Z0-9_!@#$%^&*()-]+$/;
-  const password = passwordRegex.test(input) ? input : null;
-
-  return {
-    username,
-    email,
-    password,
-  };
-}
-
-const sighUp = document.getElementById('sighUp');
-sighUp.addEventListener('click', (e) => {
-  const input = {
-    email: document.getElementById('email').value,
-    password: document.getElementById('password').value,
-    username: document.getElementById('username').value,
-  };
-
-  const sanitizedInput = sanitize(input);
-
-  if (!sanitizedInput.username || !sanitizedInput.email || !sanitizedInput.password) {
-    alert('Please enter valid input');
-    return;
-  }
-
-  // Create a new user with the sanitized input
-  createUserWithEmailAndPassword(auth, sanitizedInput.email, sanitizedInput.password)
-  .then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;
-    set(ref(database, 'users/' + user.uid), {
-        username: sanitizedInput.username,
-        email: sanitizedInput.email
-    })
-
-    alert('user created')
-
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-
-    alert(errorMessage);
-    // ..
-  });
-});
-
 </script>
 </html>
 
