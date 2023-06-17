@@ -19,5 +19,6 @@ Pour me contacter :
     E-Mail : elzadam11@gmail.com
     Slack : EvrestRGB
 
+le blog à : https://evrestrgb.github.io
 **Note:** Je tiens à créditer le créateur des badges :
 [MD-Badges](https://ileriayo.github.io/markdown-badges/)
