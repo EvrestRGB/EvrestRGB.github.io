@@ -1,0 +1,38 @@
+{
+    "title": "docs",
+    
+    "files": {
+      "main": {
+        "url": "https://evrestrgb.github.io"
+      },
+      "README(md)": {
+        "url": "./README.md"
+      },
+      "license": {
+        "url": "./LICENSE",
+        "type": "The Unlicense"
+      },
+      "docs.json": {
+        "url": "./docs.json",
+        "utility": "search files and documentation"
+    },
+        "other": [
+            "..jpg",
+            "link.html",
+            "SurveyForm.html",
+            "Injection.php"
+        ]
+    },
+
+    "folders": {
+        "icon": {
+          "url": "./icon/"
+        },
+        "more": {
+          "url": "./more/"
+        },
+        "test": {
+          "url": "./test/"
+        }
+    }
+}
