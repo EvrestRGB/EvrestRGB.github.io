@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins&family=Roboto&display=swap');
+
+/* 
+font-family: 'DM Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+/* root styling */
+:root{
+    /* css variables */
+    --light:#f8f9fa;
+    --secondary:#adb5bd;
+    --dark:#343a40;
+    --primary-color:#f15bb5;
+    --secondary-color:#2ec4b6;
+    --border:#e9ecef;
+}c
+
+body{
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+
+}
+a{
+    text-decoration: none;
+}
+
+*>*{
+    box-sizing: border-box;
+}
+
+/* Global styling */
+
+ .text-light{
+     color: var(--light);
+ }
+
+ .text-secondary{
+     color: var(--secondary);
+ }
+ .text-dark{
+     color: var(--dark);
+ }
+.text-primary{
+    color: var(--primary-color);
+}
+.bg-light{
+    background-color: var(--light);
+}
+.text-title{
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+}
+.secondary-title{
+    font-family: 'Poppins', sans-serif;
+}
+
+.display-1{
+    font-size: 22px;
+}
+.display-2{
+    font-size: 16px;
+}
+.display-3{
+    font-size: 14px;
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+
+
+.container{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: auto;
+}
+
+.img-fluid{
+    width: 100%;
+
+}
+
+/* section styling */
+
+
+/* .........Naviagtion menu............ */
+.navbar{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+/* my logo */
+.nav-brand{
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    align-self: center; /* vertically align this WebTech*/
+    font-size: 32px;
+}
+
+.collapse{
+    align-self: center;
+}
+
+.nav-link{
+    font-size: 18px;
+    margin: 12px;
+    color: var(--dark);
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.nav-link:hover{
+    color: var(--primary-color);
+
+}
+.search-Box{
+    display: inline;
+    /* inline The element doesn’t start on a new line and only occupy just the width it requires. You can’t set the width or height. */
+    border-right: 1px solid var(--secondary);
+    padding-right: 12px;
+    margin-right: 10px;
+
+}
+
+.toggle-button{
+    font-size: 21px;
+    background-color: transparent;
+    border: none;
+    position: absolute; 
+    /* with respect to its parent */
+    right: 0;
+    margin: 8px 10px;
+    display: none;
+}
+
+.toggle-button:focus{
+    outline: none;
+
+}
+/* ..........Naviagtion menu............ */
+
+/*...........Main Section..........  */
+
+#site-main{
+    margin-top: 8em;
+}
+
+#posts{
+    margin-bottom: 5em;
+}
+
+.grid{
+    margin: 0 auto;
+}
+.grid .grid-item{
+    width: calc(33.333% - 20px);
+    /* because i want to create 3 column in a container */
+    margin-bottom: 3em;
+}
+
+
+/*...........Main Section..........  */
+
+/* media query */
+@media(max-width:574px){    
+    .toggle-button{
+        display: initial;
+    }
+
+    .collapse .nav-link{
+        display: block;
+        text-align: center;
+    }
+
+    .search-Box{
+        border-right: none;
+    }
+
+    .collapse{
+    
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.8s cubic-bezier(0.01, 0.03, 0.58, 1);
+    /* transition: property duration timing-function delay|initial|inherit; */
+    /* "all"- becoz to apply for the collapse properties */
+
+    }
+
+    .collapse-toggle{
+        max-height: 500px;
+    }
+}
+
+@media(max-width:992px){    
+    .navbar{
+        flex-direction: column;
+    }
+
+}
