@@ -1,0 +1,22 @@
+{
+    "documentation": "La page de recherche de paquets et de fichiers du site.",
+    "content": {
+        "files": [
+            "./docs.jsonc",
+            "./index.html",
+            "./LICENSE",
+            "./main.js",
+            "./README.md",
+            "./style.css"
+        ],
+
+        "folders": [
+            "./more/"
+        ],
+
+        "hidden": [
+            "./more/links.html",
+            "./more/SurveyForm.html"
+        ]
+    }
+}
