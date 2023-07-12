@@ -1,11 +1,11 @@
 {
     "documentation": "La page de recherche de paquets et de fichiers du site.",
+    "note": "Ce fichiers ne contient que ce qui est accessible au visiteur, et non le code source.",
+    "dépôt": "https://github.com/EvrestRGB/EvrestRGB.github.io.git",
     "content": {
         "files": [
             "./docs.jsonc",
-            "./index.html",
             "./LICENSE",
-            "./main.js",
             "./README.md",
             "./style.css"
         ],
@@ -23,23 +23,6 @@
         "hidden": [
             "./more/links.html",
             "./more/SurveyForm.html",
-            "./more/NyanKing/audio/nyan-cat.mp3",
-            "./more/NyanKing/audio/nyan-cat.ogg",
-            "./more/NyanKing/css/nyan.css",
-            "./more/NyanKing/font/oction-local.ttf",
-            "./more/NyanKing/font/octions.eot",
-            "./more/NyanKing/font/octions.svg",
-            "./more/NyanKing/font/octions.ttf",
-            "./more/NyanKing/font/octions.woff",
-            "./more/NyanKing/js/nyan.js",
-            "./more/NyanKing/less/nyan-head.less",
-            "./more/NyanKing/less/nyan-paws.less",
-            "./more/NyanKing/less/nyan-rainbow.less",
-            "./more/NyanKing/less/nyan-sparks.less",
-            "./more/NyanKing/less/nyan-tail.less",
-            "./more/NyanKing/less/nyan.less",
-            "./more/NyanKing/.gitignore",
-            "./more/NyanKing/favicon.ico",
             "./more/NyanKing/index.html"
         ]
     }
