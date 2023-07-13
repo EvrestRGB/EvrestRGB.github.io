@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Login</h1>
+        <form action="/login" method="post">
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Password">
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+    import { getDatabase } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBipDrmOLr_8IosKrdrOphNy-TW-s4XeK8",
+      authDomain: "web-ovh.firebaseapp.com",
+      databaseURL: "https://web-ovh-default-rtdb.firebaseio.com",
+      projectId: "web-ovh",
+      storageBucket: "web-ovh.appspot.com",
+      messagingSenderId: "698864555831",
+      appId: "1:698864555831:web:e29153822aac4738c8ecb2"
+    };
+  
+
+      // Assuming the login is successful, redirect to the desired URL
+      
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+
+    login.addEventListener('click', (e)=>{
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+            signInWithEmailAndPassword(auth, email, passwod)
+            .then((userCredential) => {
+                //signed in
+                const user = userCredentia.user;
+
+                const dt = new Date();
+                    update(ref(database, 'users/' + user.uid), {
+                        last_login: dt,
+                    })
+                
+                set(ref(database, 'users/' + user.uid))
+                alert("User logged In")
+                window.location.href = "https://evrestrgb.github.io/docs.json";
+            })
+            .catch((console) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+            });
+
+    });
+</script>
+</html>
