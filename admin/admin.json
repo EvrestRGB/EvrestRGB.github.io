@@ -1,0 +1,47 @@
+{
+    "documentation": "La page de recherche (admin) de paquets et de fichiers du site.",
+    "note": "Ce fichiers contient les fichiers accessibles aux visiteurs et aux admins.",
+    "dépôt": "https://github.com/EvrestRGB/EvrestRGB.github.io.git",
+    "content": {
+        "files": [
+            "./.gitignore",
+            "./about.html",
+            "./docs.json",
+            "./gulpfile.js",
+            "./index.html",
+            "./LICENSE",
+            "./post1.html",
+            "./README.md"
+        ],
+
+        "folders": [
+            "./admin/",
+            "./css/",
+            "./img/",
+            "./js/",
+            "./less/",
+            "./more/",
+            "./vendor/",
+            "./vendor/bootstrap/",
+            "./vendor/jquery/"
+        ],
+
+        "hidden": [
+            "./admin/admin.json",
+            "./admin/traitement.html",
+            "./admin/traitement.php",
+            "./css/clean-blog.css",
+            "./css/clean-blog.min/css",
+            "./img/about-bg.jpg",
+            "./img/home-bg.jpg",
+            "./js/clean-blog.js",
+            "./js/clean-blog.min.js",
+            "./js/jqBootstrapValidation.js",
+            "./less/clean-blog.less",
+            "./less/mixins.less",
+            "./less/variables.less",
+            "./more/links.html",
+            "./more/surveyForm.html"
+        ]
+    }
+}
