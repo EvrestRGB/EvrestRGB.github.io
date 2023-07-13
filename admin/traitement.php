@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password']; // Récupérer le mot de passe soumis
 
     // Vérifier si le mot de passe est correct
-    if ($password === 'votre_mot_de_passe') {
+    if ($password === 'admin') {
         // Le mot de passe est correct, vous pouvez afficher le fichier ici
         header('Content-type: application/json');
         readfile('admin.json');

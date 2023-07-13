@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Formulaire de mot de passe</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traitement du mot de passe</title>
+    <link rel="stylesheet" type="text/css" href="traitement.css">
 </head>
-<body>
-    <form method="post" action="traitement.php">
-        <input type="password" name="password" placeholder="Mot de passe" required>
-        <button type="submit">Accéder au fichier</button>
-    </form>
+<body class="wp-admin">
+
+    <div class="login">
+        <h1>
+            <a href="#">
+                <span class="wp-logo"></span>
+                <span class="screen-reader-text">Logo</span>
+            </a>
+        </h1>
+
+        <form id="passwordForm">
+            <label for="password">Mot de passe</label>
+            <input type="password" name="password" id="password" required>
+            <input type="submit" value="Accéder au fichier" class="button button-primary button-large">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("passwordForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire
+
+            var password = document.getElementById("password").value;
+
+            // Vérifiez le mot de passe ici
+            if (password === "admin") {
+                // Mot de passe correct, redirigez vers le fichier
+                window.location.href = "admin.json";
+            } else {
+                // Mot de passe incorrect, affichez un message d'erreur
+                alert("Mot de passe incorrect");
+            }
+        });
+    </script>
+
 </body>
 </html>

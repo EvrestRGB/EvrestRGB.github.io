@@ -28,6 +28,7 @@
 
         "hidden": [
             "./admin/admin.json",
+            "./admin/traitement.css",
             "./admin/traitement.html",
             "./admin/traitement.php",
             "./css/clean-blog.css",
