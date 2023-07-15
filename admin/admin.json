@@ -42,7 +42,7 @@
             "./less/mixins.less",
             "./less/variables.less",
             "./more/links.html",
-            "./more/surveyForm.html"
+            "./more/surveyForm.html",
         ]
     }
 }
